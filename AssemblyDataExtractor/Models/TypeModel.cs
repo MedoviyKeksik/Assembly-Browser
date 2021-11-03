@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AssemblyDataExtractor.Models
 {
-    class TypeModel
+    public class TypeModel
     {
         public string Name { get; set; }
 

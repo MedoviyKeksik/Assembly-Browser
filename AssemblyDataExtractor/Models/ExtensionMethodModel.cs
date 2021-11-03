@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AssemblyDataExtractor.Models
 {
-    public class ExtensionMethodModel
+    public class ExtensionMethodModel : MethodModel
     {
         public Type TargetType { get; set; }
 
