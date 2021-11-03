@@ -3,23 +3,49 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Assembly_Browser"
+        xmlns:local="clr-namespace:Assembly_Browser.ViewModels"
         mc:Ignorable="d"
         Title="Assembly Browser" Height="450" Width="800">
+    <Window.DataContext>
+        <local:TreeInfoViewModel/>
+    </Window.DataContext>
     <Grid>
         <StackPanel>
-            <Menu VerticalAlignment="Top">
-                <MenuItem Header="File">
-                    <MenuItem Header="Open" />
-                    <MenuItem Header="Exit" />
-                </MenuItem>
-            </Menu>
-            <TreeView>
-                <TreeViewItem Header="asd
-                              ">
-                
-                </TreeViewItem>
+            <TreeView
+                Height="375"
+                ItemsSource="{Binding Path=MemberInfoViewModels}">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Path=Children}">
+                        <TextBlock Text="{Binding MemberInfo, UpdateSourceTrigger=PropertyChanged}" />
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+
             </TreeView>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox
+                Name="AssemblyFilenameBox"
+                Text="{Binding AssemblyFilename, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                Height="24"
+                MinWidth="500"
+                MaxWidth="500"
+                Margin="5, 5"
+                IsEnabled="False"
+            />
+                <Button
+                Click="OpenFile"
+                Content="Open file"
+                Height="24"
+                Width="100"
+                Margin="5, 5"
+                />
+                <Button
+                Command="{Binding SearchCommand}" 
+                Content="Find"
+                Width="70"
+                Height="24"
+                Margin="5, 5"
+            />
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
