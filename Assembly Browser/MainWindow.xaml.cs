@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,25 @@ namespace Assembly_Browser
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void OpenFile(object sender, RoutedEventArgs e)
+        {
+            var fileDialog = new OpenFileDialog
+            {
+                Filter = "Assemblies|*.dll;*.exe",
+                Title = "Select assembly",
+                Multiselect = false
+            };
+
+            var isOpen = fileDialog.ShowDialog();
+
+            if (isOpen != null && isOpen.Value)
+            {
+                AssemblyFilenameBox.Text = fileDialog.FileName;
+                AssemblyFilenameBox.BeginChange();
+                AssemblyFilenameBox.EndChange();
+            }
+
         }
     }
 }
