@@ -22,29 +22,13 @@
 
             </TreeView>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBox
-                Name="AssemblyFilenameBox"
-                Text="{Binding AssemblyFilename, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                Height="24"
-                MinWidth="500"
-                MaxWidth="500"
-                Margin="5, 5"
-                IsEnabled="False"
-            />
                 <Button
-                Click="OpenFile"
+                Command="{Binding OpenFileCommand}"
                 Content="Open file"
                 Height="24"
                 Width="100"
                 Margin="5, 5"
                 />
-                <Button
-                Command="{Binding SearchCommand}" 
-                Content="Find"
-                Width="70"
-                Height="24"
-                Margin="5, 5"
-            />
             </StackPanel>
         </StackPanel>
     </Grid>

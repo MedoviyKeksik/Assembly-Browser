@@ -14,7 +14,7 @@ namespace Assembly_Browser.ViewModels
     {
         private IDataExtractor _dataExtractor;
 
-        public SearchCommand SearchCommand { get; }
+        public OpenFileCommand OpenFileCommand { get; }
 
         public string AssemblyFilename { get; set; }
 
@@ -24,12 +24,14 @@ namespace Assembly_Browser.ViewModels
         {
             _dataExtractor = new DataExtractor();
 
-            SearchCommand = new SearchCommand(this);
+            OpenFileCommand = new OpenFileCommand(this);
         }
 
-        public void GetInfoAboutAssembly()
+        public void GetInfoAboutAssembly(string assemblyFilename)
         {
-            var list = _dataExtractor.GetInformationAboutAssembly(AssemblyFilename);
+            if (assemblyFilename == null) return;
+            MemberInfoViewModels.Clear();
+            var list = _dataExtractor.GetInformationAboutAssembly(assemblyFilename);
 
             foreach (var namespaceModel in list)
             {
