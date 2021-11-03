@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly Browser", "Assembly Browser\Assembly Browser.csproj", "{731245D9-5839-43EF-BB15-F4E42BD76909}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyDataExtractor", "AssemblyDataExtractor\AssemblyDataExtractor.csproj", "{390565F7-59A6-4333-88E1-45EDE84DF1D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyDataExtractorTests", "AssemblyDataExtractorTests\AssemblyDataExtractorTests.csproj", "{564F9A43-E3CC-4D88-B970-B637115EFC90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{731245D9-5839-43EF-BB15-F4E42BD76909}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{731245D9-5839-43EF-BB15-F4E42BD76909}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{731245D9-5839-43EF-BB15-F4E42BD76909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{390565F7-59A6-4333-88E1-45EDE84DF1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390565F7-59A6-4333-88E1-45EDE84DF1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390565F7-59A6-4333-88E1-45EDE84DF1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390565F7-59A6-4333-88E1-45EDE84DF1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{564F9A43-E3CC-4D88-B970-B637115EFC90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564F9A43-E3CC-4D88-B970-B637115EFC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564F9A43-E3CC-4D88-B970-B637115EFC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564F9A43-E3CC-4D88-B970-B637115EFC90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

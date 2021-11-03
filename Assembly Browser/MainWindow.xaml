@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assembly_Browser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Assembly Browser" Height="450" Width="800">
     <Grid>
-
+        <StackPanel>
+            <Menu VerticalAlignment="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="Open" />
+                    <MenuItem Header="Exit" />
+                </MenuItem>
+            </Menu>
+            <TreeView>
+                <TreeViewItem Header="asd
+                              ">
+                
+                </TreeViewItem>
+            </TreeView>
+        </StackPanel>
     </Grid>
 </Window>
